@@ -1,0 +1,169 @@
+/* Color Palette
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EDF2F4 - blue/white
+#EF233C - red
+*/
+
+/*
+Global Styles
+****************************/
+
+/* apply a natural box layout model to all elements,
+but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+a {
+    color: #EF233C;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 60px 50px;
+    overflow: auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    text-decoration: none;
+    background: #EF233C;
+    color: white;
+    padding: 10px;
+    display: inline-block; /* Allows for btn with padding to remain inside header block */
+}
+
+/*
+Header and Footer Styles
+****************************/
+header, footer {
+    background: #2B2D42;
+    color: #8D99AE;
+}
+
+/* Header Styles */
+header {
+    padding-top: 50px; /* Prevents nav-bar from covering top of header content */
+    position: relative; /* Contains the 'download' style within the header  */
+}
+
+header h1, header h2 {
+    color: #EDF2F4;
+    margin: 0;
+}
+
+.profile-img {
+    border-radius: 50%; /* Curve the profile image */
+}
+
+.download {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+    background: white;
+    position: fixed;
+    top: 0; /* Force navigation bar to stay fixed at top of screen */
+    /* Force navigation bar to span entire width of screen */
+    left: 0;
+    right: 0;
+    z-index: 100; /* Allows nav-bar to have higher index than education section */
+}
+
+nav a {
+    display: inline-block; /* Gives nav links inline and block characteristics */
+    padding: 15px 20px;
+    text-decoration: none; /* Remove underline in link */
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+/*
+Work Experience Styles
+****************************/
+.work {
+    background: #EDF2F4;
+}
+
+h3 ~ p { /* Tackles any p that comes after an h3 */
+    margin: 0;
+}
+
+.job-description {
+    margin-bottom: 25px;
+}
+
+.job-description p:first-of-type {
+    margin-top: 0;
+}
+
+/*
+Education Styles
+****************************/
+.education {
+    background: linear-gradient( rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5) ),
+                url(../images/stig-ottesen-358882.jpg) no-repeat fixed;
+    background-size: cover;
+    position: relative; /* Keep the 'credit' style within education section */
+}
+
+p + h3 { /*Tackles the only the h3 IMMEDIATELY following the p*/
+    margin-top: 30px;
+}
+
+/* Positions credit text to bottom right of education section */
+.credit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
